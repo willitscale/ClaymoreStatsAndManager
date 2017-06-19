@@ -2,8 +2,8 @@ package uk.co.n3tw0rk.claymorestats;
 
 import uk.co.n3tw0rk.claymorestats.api.Claymore;
 import uk.co.n3tw0rk.claymorestats.remote.RemoteServer;
-import uk.co.n3tw0rk.claymorestats.remote.domain.Command;
 import uk.co.n3tw0rk.claymorestats.remote.domain.ServerCommand;
+import uk.co.n3tw0rk.claymorestats.utils.Processes;
 import uk.co.n3tw0rk.claymorestats.utils.SystemEvents;
 
 import java.io.IOException;
@@ -98,8 +98,10 @@ public class Main {
                         SystemEvents.shutdown(false);
                         break;
                     case KILL_MINER:
+                        Processes.kill(serverCommand.getExtra());
                         break;
                     case START_MINER:
+                        Processes.start(serverCommand.getExtra());
                         break;
                 }
             } catch (IOException e) {
