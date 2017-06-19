@@ -1,0 +1,5 @@
+.idea/
+*.iml
+src/main/resources/config.properties
+/build/
+.gradle
