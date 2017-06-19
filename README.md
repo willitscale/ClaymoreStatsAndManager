@@ -1,7 +1,7 @@
 # ClaymoreStatsAndManager
 
 Set-up
-Copy the example config `src/main/resources/config.example.properties` to src/main/resources/config.properties` and add your settings.
+Copy the example config `src/main/resources/config.example.properties` to `src/main/resources/config.properties` and add your settings.
 
 This is a primitive set-up, so you need to set the `rigs` property to equal the amount of rigs you have in the properties.
 
